@@ -16,6 +16,7 @@
 		9B8751441D1D591A00132FEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8751421D1D591A00132FEC /* LaunchScreen.storyboard */; };
 		9B87514F1D1D591A00132FEC /* WeexOCMarryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B87514E1D1D591A00132FEC /* WeexOCMarryTests.m */; };
 		9B87515A1D1D591A00132FEC /* WeexOCMarryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8751591D1D591A00132FEC /* WeexOCMarryUITests.m */; };
+		9B8751681D1D61EA00132FEC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8751671D1D61EA00132FEC /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9B8751551D1D591A00132FEC /* WeexOCMarryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeexOCMarryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8751591D1D591A00132FEC /* WeexOCMarryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeexOCMarryUITests.m; sourceTree = "<group>"; };
 		9B87515B1D1D591A00132FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B8751671D1D61EA00132FEC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		D91EECE4A3BA1AEFE8ED3743 /* libPods-WeexOCMarry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeexOCMarry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA425629AD0ABDBB413F088D /* Pods-WeexOCMarry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeexOCMarry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeexOCMarry/Pods-WeexOCMarry.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8751681D1D61EA00132FEC /* libsqlite3.0.tbd in Frameworks */,
 				247AD1EE36CF348A4F725781 /* libPods-WeexOCMarry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +162,7 @@
 		BAF443AA53CEBADC3BB1DCFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B8751671D1D61EA00132FEC /* libsqlite3.0.tbd */,
 				D91EECE4A3BA1AEFE8ED3743 /* libPods-WeexOCMarry.a */,
 			);
 			name = Frameworks;

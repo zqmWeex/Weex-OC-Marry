@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <WeexSDK/WXSDKEngine.h>
+#import <WeexSDK/WXLog.h>
+#import <WeexSDK/WXDebugTool.h>
+#import <WeexSDK/WXAppConfiguration.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +21,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    UIViewController *rootVC = [[UIViewController alloc] init];
+    rootVC.view.backgroundColor = [UIColor redColor];
+    self.window.rootViewController = rootVC;
+    
+    [self configureWeex];
+    
     return YES;
+}
+
+- (void)configureWeex {
+    [WXAppConfiguration setAppGroup:@"codinghacker"];
+    [WXAppConfiguration setAppName:@"Marry"];
+    [WXAppConfiguration setAppVersion:@"1.0.1"];
+    
+    [WXAppConfiguration setExternalUserAgent:@"ExternalUA"];
+    
+    [WXSDKEngine initSDKEnviroment];
+    
+//    [WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
+//    [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
+    
+    [WXSDKEngine registerComponent:@"select" withClass:NSClassFromString(@"WXSelectComponent")];
+//    [WXSDKEngine registerModule:@"event" withClass:[WXEventModule class]];
+//    [self atAddPlugin];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
